@@ -1,0 +1,7 @@
+#ifndef ceva
+#define ceva
+
+void partitioneaza(int v[],int p,int q,int &k);
+void quicksort(int v[],int p,int q);
+
+#endif

@@ -1,0 +1,30 @@
+#include <iostream>
+#include "header.h"
+using namespace std;
+
+int main() {
+    int v[]={38,27,43,3,9,82,10};
+    int n=7;
+    int *temp=new int[n];
+    
+    for(int i=0;i<n;i++)
+    {
+        temp[i]=0;
+    }
+
+    cout<<"vector initial: ";
+    for(int i=0;i<n;i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    cout<<endl;
+    
+    mergesort(v, 0, n - 1,temp);
+    
+    cout<<"vector sortat: ";
+    for (int i=0;i<n;i++)
+    {
+        cout<<v[i]<<" ";
+    }
+    return 0;
+}

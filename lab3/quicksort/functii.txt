@@ -1,0 +1,54 @@
+#include <iostream>
+#include "header.h"
+using namespace std;
+
+void partitioneaza(int v[],int p,int q,int &k) {
+    int x=v[p]; //pivot
+    int i=p+1;
+    int j=q;
+
+    while (i<=j)
+    {
+        if (v[i]<=x)
+        {
+            i=i+1;
+        }
+        if (v[j]>=x)
+        {
+            j = j-1;
+        }
+        if (i<j)
+        {
+            if ((v[i]>x) && (x>v[j]))
+            {
+                swap(v[i],v[j]);
+                i=i+1;
+                j=j-1;
+            }
+        }
+    }
+
+    k=i-1;
+    v[p]=v[k];
+    v[k]=x;
+}
+
+void quicksort(int v[],int p,int q)
+{
+    if(p<q)
+    {
+        int k;
+        
+        partitioneaza(v,p,q,k);
+        
+        quicksort(v,p,k-1);
+        quicksort(v,k+1,q);
+    }
+}
+
+void swap(int &x,int &y)
+{
+    int c=x;
+    x=y;
+    y=c;
+}

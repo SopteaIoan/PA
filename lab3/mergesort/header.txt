@@ -1,0 +1,7 @@
+#ifndef ceva
+#define ceva
+
+void interclasare(int v[],int p,int q,int m,int temp[]);
+void mergesort(int v[],int p,int q,int temp[]);
+
+#endif
