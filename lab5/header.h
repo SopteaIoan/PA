@@ -1,5 +1,5 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef ceva
+#define ceva
 
 struct Node {
     int pondere;
@@ -9,11 +9,11 @@ struct Node {
 Node *createnode(int p);
 
 struct ComparaNoduri {
-    bool operator()(Node* a, Node* b) {
+    bool operator()(Node* a,Node* b) {
         return a->pondere > b->pondere;
     }
 };
 
-int calculeazaLEP(Node* radacina, int nivel);
+int calculeazaLEP(Node* radacina,int nivel);
 
 #endif
