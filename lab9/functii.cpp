@@ -2,10 +2,9 @@
 #include "header.h"
 using namespace std;
 
-void bkt(int s,int k, int r, int w[], int x[], int m,int n)
+void bkt(int s,int k,int r,int w[],int x[],int m,int n)
 {
     if(k==n) return;
-
     x[k]=1;
     if(s+w[k]==m)
     {
