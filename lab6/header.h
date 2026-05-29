@@ -5,11 +5,11 @@ struct obiect
 {
     double w;
     double p;
-    double r; //ratio
+    double r; //ratie
     int index;
 };
 
-void rucsac(obiect o[10], int n, int M, double x[]);
+void rucsac(obiect o[10],int n,int M,double x[]);
 void bubblesort(obiect o[10],int n);
 
 #endif
