@@ -5,20 +5,23 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     priority_queue<Node*,vector<Node*>,ComparaNoduri> B;
     int n,val;
 
     cout<<"n=";
     cin>>n;
 
-    for (int i=0;i<n;i++) {
-        cout<<"pondere pentru nodul " << i + 1 << ": ";
-        cin >> val;
+    for (int i=0;i<n;i++)
+    {
+        cout<<"pondere pentru nodul "<<i+1<< ": ";
+        cin>>val;
         B.push(createnode(val));
     }
 
-    while (B.size() > 1) {
+    while (B.size() > 1)
+    {
         Node *t1=B.top(); 
         B.pop();
         
