@@ -10,12 +10,14 @@ Node *createnode(int p)
     return nod;
 }
 
-int calculeazaLEP(Node* radacina,int nivel) {
-    if (radacina==nullptr) return 0;
+int calculeazaLEP(Node *radacina,int nivel)
+{
+    if(radacina==nullptr) return 0;
 
-    if (radacina->stanga==nullptr && radacina->dreapta==nullptr) {
+    if(radacina->stanga==nullptr && radacina->dreapta==nullptr) {
         return radacina->pondere*nivel;
     }
 
     return calculeazaLEP(radacina->stanga,nivel+1)+calculeazaLEP(radacina->dreapta,nivel+1);
 }
+ 
